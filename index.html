@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="main.css" />
+
+  <title>Tip calculator app</title>
+</head>
+
+<body>
+  <form>
+    <div class="heading">
+      <p>SPLI</p>
+      <p>TTER</p>
+    </div>
+
+    <div class="card">
+
+      <div class="billEditCard">
+        <div class="bill">
+          <p>Bill</p>
+          <input type="number" name="bill" id="bill" step=".01" min="0" />
+        </div>
+
+        <div class="tip">
+          <p>Select Tip %</p>
+          <div class="btn-wrapper">
+            <button class="btn radioBtn" value="5" onclick="handleRadioBtn">
+              5%
+            </button>
+            <button class="btn radioBtn" value="10" onclick="handleRadioBtn">
+              10%
+            </button>
+            <button class="btn radioBtn" value="15" onclick="handleRadioBtn">
+              15%
+            </button>
+            <button class="btn radioBtn" value="25" onclick="handleRadioBtn">
+              25%
+            </button>
+            <button class="btn radioBtn" value="50" onclick="handleRadioBtn">
+              50%
+            </button>
+            <input type="text" name="customTip" id="customTip" class="btn radioBtn" onclick="handleRadioBtn" min="0"
+              max="100" placeholder="Custom" />
+          </div>
+        </div>
+
+        <div class="noPeople">
+          <p>Number of People</p>
+          <input type="number" name="noPeople" id="noPeople" min="0" />
+        </div>
+      </div>
+
+      <div class="billShowCard">
+        <div class="showTip">
+          <p class="billShowHeading">Tip Amount</p>
+          <p>/ person</p>
+        </div>
+
+        <div class="showTotal">
+          <p class="billShowHeading">Total</p>
+          <p>/ person</p>
+        </div>
+
+        <button class="btn" type="reset">Reset</button>
+      </div>
+    </div>
+  </form>
+  <script src="index.js"></script>
+</body>
+
+</html>
